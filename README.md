@@ -3,24 +3,24 @@
 ![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)
 
 The Chambolle-Pock solver is a numerical optimization package for solving problems in the form
-```
-minimize        0.5 x' P x + q' x
+```math
+\text{minimize}\quad        0.5 x' P x + q' x\\
 
-subject to      Hx + b \in \mathbb{K}, 
+\text{subject to}\quad      Hx + b \in \mathcal{K}, 
 ```
-where `\mathbb{K}` is a convex set.
+where $\mathcal{K}$ is a convex set.
 
 We have implemented the following constraints:
 1. Second-order cone (SOC) constraint:
-```
+```math
     \{ (x, t) | ||x||_2 <= t \}
 ```
 2. Interval constraint:
-```
+```math
     \{ x | a_{\min} <= x <= a_{\max} \}
 ```
 3. ReLU constraint:
-```
+```math
     \{ x | x >= 0 \}
 ```
 

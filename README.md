@@ -4,7 +4,7 @@
 
 The Chambolle-Pock solver is a numerical optimization package for solving problems in the form
 ```math
-\text{minimize}\quad        0.5 x' P x + q' x\\
+\text{minimize}\quad        0.5 x^\top P x + q^\top x\\
 
 \text{subject to}\quad      Hx + b \in \mathcal{K}, 
 ```
@@ -13,15 +13,15 @@ where $\mathcal{K}$ is a convex set.
 We have implemented the following constraints:
 1. Second-order cone (SOC) constraint:
 ```math
-    \{ (x, t) | ||x||_2 <= t \}
+    \{ (x, t) \mid \|x\|_2 \le t \}
 ```
 2. Interval constraint:
 ```math
-    \{ x | a_{\min} <= x <= a_{\max} \}
+    \{ x \mid a_{\min} \le x \le a_{\max} \}
 ```
 3. ReLU constraint:
 ```math
-    \{ x | x >= 0 \}
+    \{ x \mid x \ge 0 \}
 ```
 
 The solver has two versions: 
